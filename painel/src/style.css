@@ -1,0 +1,120 @@
+:root {
+  --bg: #f4f3ef;
+  --surface: #fcfcfb;
+  --surface-2: #efeee9;
+  --border: #dddcd5;
+  --text: #0b0b0b;
+  --text-2: #52514e;
+  --text-3: #75746e;
+  --accent: #2a78d6;
+  --accent-soft: #dbe8f8;
+  --accent-text: #1c5cab;
+  --bar: #2a78d6;
+  --bar-muted: #b7d3f6;
+  --pcd: #6250d6;
+  --pcd-soft: #e8e5fa;
+  --lg: #a15c00;
+  --lg-soft: #fbeed7;
+  --novo: #0d7a52;
+  --novo-soft: #d8f2e6;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.05), 0 2px 8px rgb(0 0 0 / 0.04);
+  --radius: 12px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121211;
+    --surface: #1a1a19;
+    --surface-2: #242422;
+    --border: #34342f;
+    --text: #f0efec;
+    --text-2: #c3c2b7;
+    --text-3: #9b9a90;
+    --accent: #3987e5;
+    --accent-soft: #1c2c42;
+    --accent-text: #86b6ef;
+    --bar: #3987e5;
+    --bar-muted: #1c5cab;
+    --pcd: #9085e9;
+    --pcd-soft: #2a2647;
+    --lg: #e8a33a;
+    --lg-soft: #3a2c14;
+    --novo: #4cc995;
+    --novo-soft: #163527;
+    --shadow: none;
+    color-scheme: dark;
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.45;
+  font-variant-numeric: tabular-nums;
+}
+
+button,
+input,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 8px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+  white-space: nowrap;
+  line-height: 1.6;
+}
+.badge.pcd {
+  background: var(--pcd-soft);
+  color: var(--pcd);
+}
+.badge.lg {
+  background: var(--lg-soft);
+  color: var(--lg);
+}
+.badge.novo {
+  background: var(--novo-soft);
+  color: var(--novo);
+}
+
+.muted {
+  color: var(--text-2);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
