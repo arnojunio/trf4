@@ -70,8 +70,8 @@ function irParaCandidatos() {
     </template>
 
     <footer class="rodape muted">
-      Fonte: lista de candidatos nomeados publicada pelo TRF4 (arquivo <code>data.txt</code>). Para
-      atualizar, substitua <code>public/data.txt</code>.
+      Fonte: lista de candidatos nomeados publicada pelo TRF4 (dataset <code>nomeacoes.json</code>).
+      Para atualizar, gere o arquivo com <code>python3 scripts/gerar_dataset.py</code>.
     </footer>
   </div>
 </template>

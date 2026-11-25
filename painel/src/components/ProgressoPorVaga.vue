@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { fmtDataCurta, useNomeacoes, type GrupoVaga } from '@/composables/useNomeacoes'
-import { SECAO_LABEL, type Secao } from '@/lib/parser'
+import { SECAO_LABEL, type Secao } from '@/lib/tipos'
 
 const emit = defineEmits<{ ver: [] }>()
 const { grupos, filtros } = useNomeacoes()

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { watch } from 'vue'
 import { fmtDataCurta, useNomeacoes } from '@/composables/useNomeacoes'
-import { SECAO_LABEL, type Secao } from '@/lib/parser'
+import { SECAO_LABEL, type Secao } from '@/lib/tipos'
 
 const { filtros, opcoes, atos, filtrosAtivos, limpar, filtrados } = useNomeacoes()
 

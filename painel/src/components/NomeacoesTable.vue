@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref } from 'vue'
 import { fmtData, useNomeacoes } from '@/composables/useNomeacoes'
-import type { Nomeacao } from '@/lib/parser'
+import type { Nomeacao } from '@/lib/tipos'
 
 type Coluna = 'classificacao' | 'nome' | 'cargoCurto' | 'localidade' | 'data'
 

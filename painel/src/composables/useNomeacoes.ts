@@ -1,5 +1,5 @@
 import { computed, reactive, ref, watch } from 'vue'
-import { parseData, type Nomeacao, type Secao } from '@/lib/parser'
+import { deDataset, type DatasetNomeacoes, type Nomeacao, type Secao } from '@/lib/tipos'
 
 export interface Filtros {
   q: string
@@ -87,11 +87,12 @@ async function carregar() {
   if (carregado) return
   carregado = true
   try {
-    const res = await fetch(`${import.meta.env.BASE_URL}data.txt`, { cache: 'no-cache' })
+    const res = await fetch(`${import.meta.env.BASE_URL}nomeacoes.json`, { cache: 'no-cache' })
     if (!res.ok) throw new Error(`HTTP ${res.status}`)
-    todos.value = parseData(await res.text())
+    const ds = (await res.json()) as DatasetNomeacoes
+    todos.value = ds.nomeacoes.map(deDataset)
   } catch (e) {
-    error.value = `Não foi possível carregar data.txt (${(e as Error).message})`
+    error.value = `Não foi possível carregar nomeacoes.json (${(e as Error).message})`
     carregado = false
   } finally {
     loading.value = false
